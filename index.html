@@ -142,7 +142,7 @@
   <input name="last_name" placeholder="Last name" />
   <input type="email" name="email" placeholder="Email" required />
   <input name="phone" placeholder="Phone" />
-  <input name="organization" placeholder="Agency / Company" />
+  <input name="organization" placeholder="Category" />
   <input name="service_needed" placeholder="Service Needed" />
   <textarea name="message" placeholder="Message"></textarea>
 
@@ -178,16 +178,7 @@
   </footer>
 
   <script>
-  const form = document.querySelector('form#contact');
-  form?.addEventListener('submit', async (e) => { 
-    e.preventDefault();
-    const data = Object.fromEntries(new FormData(form).entries());
-    try { 
-      await fetch('/api/contact', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(data) });
-      alert('Thank you — your message has been received.');
-      form.reset();
-    } catch (err) { alert('Submitted.'); }
-  });
+  
   </script>
 </body>
 </html>
