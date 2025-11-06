@@ -1,20 +1,21 @@
 
 :root {
-  --bg: #0b0b0f;          /* keep dark luxury background */
-  --text: #f6f3ff;        /* soft white with a hint of purple */
-  --muted: #b7aee6;       /* muted lavender for secondary text */
+  /* NAVY + GOLD + WHITE THEME */
+  --bg: #0a0e1a;           /* Deep Navy background */
+  --text: #ffffff;         /* White text */
+  --muted: #b8bfd4;        /* Light desaturated blue-gray for secondary text */
 
-  --purple: #5b3ea6;      /* main royal purple */
-  --purple-dark: #3c2773;
-  --purple-light: #7d5fe0;
+  --navy: #0a0e1a;         /* Primary Navy */
+  --navy-light: #152040;   /* Softer navy for cards/sections */
+  --navy-dark: #050811;    /* Almost black navy */
 
-  --gold: #d4af37;        /* luxury gold */
-  --gold-light: #f4d77f;
-  --gold-dark: #a88524;
+  --gold: #d4af37;         /* Executive Gold */
+  --gold-light: #f7d97c;   /* Soft gold for hover */
+  --gold-dark: #9c7f22;    /* Deepened gold */
 
-  --card: #14121c;        /* card background */
-  --border: #2a2740;      /* border lines */
-  --accent: var(--gold);  /* accent now gold */
+  --card: #11182c;         /* Card background navy */
+  --border: #1f2b45;       /* Borders */
+  --accent: var(--gold);   /* Accent color */
 }
 
 * { box-sizing: border-box; }
@@ -96,4 +97,84 @@ a:hover {
 body {
   background: var(--bg);
   color: var(--text);
+}
+/* ===== GLOBAL THEME APPLICATION ===== */
+
+/* Page background + text */
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* Subheadings / secondary text */
+.sub, h4, h5, h6 {
+  color: var(--muted);
+}
+
+/* Buttons in Gold */
+.btn {
+  background: var(--gold);
+  color: #000;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+.btn:hover {
+  background: var(--gold-light);
+  box-shadow: 0 0 14px var(--gold-light);
+}
+
+/* Links hover */
+a:hover {
+  color: var(--gold-light);
+}
+
+/* Card Backgrounds */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  background: var(--navy-dark);
+  color: var(--text);
+  padding: 24px 0;
+  border-top: 1px solid var(--border);
+}
+/* ===== SECTION BACKGROUND BLOCKS (NAVY THEME) ===== */
+
+/* Dark Navy section */
+.section-navy {
+  background: var(--navy-dark);
+  padding: 70px 0;
+}
+
+/* Lighter Navy section (for contrast) */
+.section-navy-light {
+  background: var(--navy-light);
+  padding: 70px 0;
+}
+
+/* Gold Highlight section — use sparingly */
+.section-gold {
+  background: var(--gold);
+  color: #000;
+  padding: 70px 0;
+}
+
+/* Content wrapper */
+.section-content {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 24px;
 }
