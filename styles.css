@@ -44,3 +44,13 @@ hr { border:0; height:1px; background: var(--border); margin:28px 0; }
   .grid { grid-template-columns: 1fr; }
   .two-col { grid-template-columns: 1fr; }
 }
+/* Contact form quick fix: stack fields */
+form#contact { display:block; max-width: 720px; }
+form#contact input,
+form#contact textarea,
+form#contact select {
+  display:block;
+  width:100%;
+  box-sizing:border-box;
+  margin:10px 0;
+}
