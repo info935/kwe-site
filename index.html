@@ -137,18 +137,24 @@
   <section id="contact" class="section">
     <h2>Let’s scope your need</h2>
     <div class="two-col">
-      <form class="form" id="contact" method="post" action="/api/contact">
-        <input name="firstname" placeholder="First name" required />
-        <input name="lastname" placeholder="Last name" />
-        <input type="email" name="email" placeholder="Email" required />
-        <input name="phone" placeholder="Phone" />
-        <input name="company" placeholder="Agency / Company" />
-        <input name="service_needed" placeholder="Service Needed" />
-        <input name="timeline" placeholder="Timeline" />
-        <textarea name="message" placeholder="Message"></textarea>
-        <button class="btn" type="submit">Send</button>
-        <p class="small">We do not sell data. We use your info solely to respond and deliver services.</p>
-      </form>
+      <form id="contact" method="POST" action="https://usebasin.com/f/ff58ca67d024">
+  <input name="first_name" placeholder="First name" required />
+  <input name="last_name" placeholder="Last name" />
+  <input type="email" name="email" placeholder="Email" required />
+  <input name="phone" placeholder="Phone" />
+  <input name="organization" placeholder="Agency / Company" />
+  <input name="service_needed" placeholder="Service Needed" />
+  <textarea name="message" placeholder="Message"></textarea>
+
+  <!-- Basin redirect to show success message on same page -->
+  <input type="hidden" name="_redirect" value="/contact#thanks" />
+  <!-- Optional spam trap -->
+  <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" />
+
+  <button class="btn" type="submit">Send</button>
+  <p class="small">We do not sell data. We use your info solely to respond and deliver services.</p>
+</form>
+
       <div class="card">
         <h3>Contact</h3>
         <p><strong>Phone:</strong> (718) 513-9607<br/>
